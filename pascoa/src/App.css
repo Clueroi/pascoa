@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 :root {
   --primary: #FF6B9D;
   --primary-dark: #E91E63;
@@ -27,11 +35,13 @@ body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   color: var(--text);
   line-height: 1.6;
-  overflow-x: hidden;
+  background: var(--gradient-hero);
 }
 
 .app {
   min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
   background: var(--gradient-hero);
   position: relative;
 }
@@ -76,9 +86,9 @@ body {
 }
 
 .header-content {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,9 +123,13 @@ body {
 /* ===== HERO SECTION ===== */
 .hero {
   text-align: center;
-  padding: 80px 20px 60px;
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 100px 40px 80px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
 }
@@ -138,11 +152,12 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  line-height: 1.1;
+  margin-bottom: 25px;
   color: var(--text);
+  max-width: 900px;
 }
 
 .hero-title .highlight {
@@ -153,20 +168,20 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto 30px;
+  max-width: 700px;
+  margin: 0 auto 40px;
   line-height: 1.7;
 }
 
 /* ===== COUNTDOWN ===== */
 .countdown {
   background: white;
-  padding: 25px;
+  padding: 35px 50px;
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .countdown > p {
@@ -248,80 +263,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: 80px;
+  padding: 80px 60px;
+  width: 100%;
+  min-height: 100vh;
   flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,240,245,0.5) 100%);
 }
 
-.ebook-mockup {
+.ebook-image-container {
   position: relative;
-  width: 280px;
-  height: 380px;
-  perspective: 1000px;
-}
-
-.book-spine {
-  position: absolute;
-  left: 0;
-  width: 40px;
-  height: 100%;
-  background: linear-gradient(90deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
-  border-radius: 5px 0 0 5px;
-  transform: rotateY(-30deg);
-  transform-origin: left;
-}
-
-.book-cover {
-  position: absolute;
-  left: 40px;
-  width: 240px;
-  height: 100%;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  border-radius: 0 10px 10px 0;
-  box-shadow: 10px 10px 40px rgba(0,0,0,0.2);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transform: rotateY(-10deg);
-  transform-origin: left;
 }
 
-.cover-content {
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
-
-.cover-emoji {
-  font-size: 3rem;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.cover-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.cover-content p {
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.cover-badges {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.cover-badges span {
-  background: rgba(255,255,255,0.2);
-  padding: 5px 12px;
+.ebook-image {
+  width: 350px;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
   border-radius: 15px;
-  font-size: 0.75rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.ebook-image:hover {
+  transform: scale(1.02) translateY(-10px);
+}
+
+.ebook-image-note {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.7;
 }
 
 .preview-text h2 {
@@ -342,7 +317,12 @@ body {
 
 /* ===== BENEFITS ===== */
 .benefits {
-  padding: 80px 20px;
+  padding: 100px 40px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: white;
 }
 
@@ -355,9 +335,10 @@ body {
 
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -394,7 +375,12 @@ body {
 
 /* ===== SOCIAL PROOF ===== */
 .social-proof {
-  padding: 80px 20px;
+  padding: 100px 40px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: linear-gradient(135deg, #FFF5F7 0%, #F5F0FF 100%);
 }
 
@@ -426,9 +412,10 @@ body {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -459,7 +446,13 @@ body {
 
 /* ===== PRICING ===== */
 .pricing {
-  padding: 80px 20px;
+  padding: 100px 40px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: white;
 }
 
@@ -592,12 +585,18 @@ body {
 
 /* ===== FAQ ===== */
 .faq {
-  padding: 80px 20px;
+  padding: 100px 40px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: linear-gradient(135deg, #FFF8E7 0%, #FFF0F5 100%);
 }
 
 .faq-list {
-  max-width: 700px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -653,7 +652,13 @@ body {
 /* ===== FINAL CTA ===== */
 .final-cta {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 40px;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
 }

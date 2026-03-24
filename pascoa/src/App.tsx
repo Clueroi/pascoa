@@ -140,11 +140,10 @@ function App() {
       <section className="preview">
         <div className="ebook-image-container">
           <img 
-            src="/ebook-cover.png" 
+            src="/ebook-cover.svg" 
             alt="E-book Páscoa Lucrativa - Capa do guia completo" 
             className="ebook-image"
           />
-          <p className="ebook-image-note">Substitua por: ebook-cover.png na pasta public</p>
         </div>
         <div className="preview-text">
           <h2>Tudo que você precisa em um só lugar</h2>
