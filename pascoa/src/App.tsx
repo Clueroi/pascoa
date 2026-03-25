@@ -110,7 +110,7 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-badge">🌸 Edição 2024 Limitada 🌸</div>
+        <div className="hero-badge">🌸 Edição 2026 Limitada 🌸</div>
         <h1 className="hero-title">
           Aprenda a Fazer <span className="highlight">Ovos de Páscoa</span> que Vendem Sozinhos!
         </h1>
@@ -131,7 +131,7 @@ function App() {
         </div>
 
         <a href="#comprar" className="btn-main">
-          🥚 Quero Aprender Agora — R$ 27,90
+          🥚 Quero Aprender Agora — R$ 14,99
         </a>
         <p className="guarantee-text">✅ 7 dias de garantia • Acesso imediato • Pagamento seguro</p>
       </section>
@@ -150,7 +150,6 @@ function App() {
           <ul className="preview-list">
             <li>📖 127 páginas de conteúdo puro</li>
             <li>📸 Mais de 200 fotos passo a passo</li>
-            <li>🎥 Bônus: 3 videoaulas exclusivas</li>
             <li>📋 Planilha de custos e precificação</li>
             <li>🎁 10 modelos de embalagens editáveis</li>
           </ul>
@@ -174,9 +173,9 @@ function App() {
       {/* Social Proof */}
       <section className="social-proof">
         <div className="stats-bar">
-          <div><strong>2.500+</strong><span>Alunos</span></div>
-          <div><strong>50+</strong><span>Receitas</span></div>
-          <div><strong>4.9★</strong><span>Avaliação</span></div>
+          <div><strong>1.000+</strong><span>Compras</span></div>
+          <div><strong>30+</strong><span>Receitas</span></div>
+          <div><strong>4.6★</strong><span>Avaliação</span></div>
         </div>
         
         <h2 className="section-title">O que dizem nossas alunas</h2>
@@ -193,22 +192,21 @@ function App() {
           <span className="pricing-badge">🔥 MAIS POPULAR</span>
           <h3>E-book Páscoa Lucrativa</h3>
           <div className="price-comparison">
-            <span className="old-price">De R$ 97,00</span>
-            <span className="new-price">R$ 27,90</span>
+            <span className="old-price">De R$ 47,00</span>
+            <span className="new-price">R$ 14,99</span>
           </div>
           <p className="price-note">Pagamento único • Acesso vitalício</p>
           
           <ul className="pricing-features">
             <li>✓ E-book completo (127 páginas)</li>
             <li>✓ 50+ receitas detalhadas</li>
-            <li>✓ 3 videoaulas bônus</li>
             <li>✓ Planilha de precificação</li>
             <li>✓ 10 modelos de embalagens</li>
             <li>✓ Suporte por email</li>
           </ul>
           
           <button className="btn-buy">
-            🛒 COMPRAR AGORA — R$ 27,90
+            🛒 COMPRAR AGORA — R$ 14,99
           </button>
           
           <div className="payment-icons">

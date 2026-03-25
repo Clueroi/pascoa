@@ -25,6 +25,11 @@ html, body, #root {
   --white: #FFFFFF;
   --text: #2D2D2D;
   --text-light: #666666;
+  --chocolate-dark: #3E2723;
+  --chocolate-medium: #5D4037;
+  --chocolate-light: #6D4C41;
+  --chocolate-milk: #8D6E63;
+  --chocolate-cream: #D7CCC8;
   --gradient-hero: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 50%, #F0E6FF 100%);
   --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #FFF8E7 100%);
   --shadow-soft: 0 10px 40px rgba(255, 107, 157, 0.15);
@@ -44,6 +49,32 @@ body {
   width: 100%;
   background: var(--gradient-hero);
   position: relative;
+}
+
+/* ===== CHOCOLATE DECORATIONS ===== */
+.chocolate-wave-static {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.chocolate-wave-static.top {
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.chocolate-wave-static.bottom {
+  bottom: 0;
+}
+
+.chocolate-wave-static svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* ===== FLOATING EGGS ===== */
@@ -264,11 +295,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 80px;
-  padding: 80px 60px;
+  padding: 100px 60px 80px;
   width: 100%;
   min-height: 100vh;
   flex-wrap: wrap;
   background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,240,245,0.5) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .ebook-image-container {
@@ -317,13 +350,15 @@ body {
 
 /* ===== BENEFITS ===== */
 .benefits {
-  padding: 100px 40px;
+  padding: 100px 40px 120px;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-title {
@@ -652,7 +687,7 @@ body {
 /* ===== FINAL CTA ===== */
 .final-cta {
   text-align: center;
-  padding: 120px 40px;
+  padding: 140px 40px 120px;
   width: 100%;
   min-height: 80vh;
   display: flex;
@@ -661,6 +696,8 @@ body {
   align-items: center;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .final-cta h2 {
