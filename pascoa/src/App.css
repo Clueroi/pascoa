@@ -839,41 +839,463 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+
+/* Tablet e telas médias */
+@media (max-width: 992px) {
+  .header-content {
+    padding: 15px 20px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .btn-header {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .hero {
+    padding: 60px 20px 50px;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
   .preview {
     flex-direction: column;
     gap: 40px;
+    padding: 80px 20px;
   }
   
-  .ebook-mockup {
-    width: 240px;
-    height: 320px;
+  .ebook-image {
+    width: 280px;
   }
   
-  .book-cover {
-    width: 200px;
+  .preview-text h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  
+  .preview-list li {
+    font-size: 1rem;
+  }
+  
+  .benefits {
+    padding: 60px 20px 80px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .benefit-card {
+    padding: 25px;
+  }
+  
+  .social-proof {
+    padding: 60px 20px;
   }
   
   .stats-bar {
-    gap: 30px;
+    gap: 40px;
   }
   
   .stats-bar strong {
     font-size: 2rem;
   }
   
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .pricing {
+    padding: 60px 20px;
+  }
+  
+  .pricing-card {
+    padding: 30px 25px;
+  }
+  
+  .new-price {
+    font-size: 2.5rem;
+  }
+  
+  .faq {
+    padding: 60px 20px;
+  }
+  
+  .faq-list {
+    max-width: 100%;
+  }
+  
+  .faq-question {
+    padding: 20px;
+    font-size: 1rem;
+  }
+  
+  .final-cta {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+  
+  .final-cta h2 {
+    font-size: 1.8rem;
+  }
+  
+  .chocolate-wave-static {
+    height: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 12px 15px;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .btn-header {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  
+  .hero {
+    padding: 50px 15px 40px;
+  }
+  
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+  
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  
+  .countdown {
+    padding: 25px 30px;
+    margin-bottom: 25px;
+  }
+  
   .timer > div {
-    padding: 10px 15px;
-    min-width: 55px;
+    padding: 10px 12px;
+    min-width: 50px;
   }
   
   .timer span {
     font-size: 1.5rem;
   }
   
-  .btn-main.large {
-    padding: 18px 30px;
+  .timer small {
+    font-size: 0.65rem;
+  }
+  
+  .btn-main {
+    padding: 16px 30px;
+    font-size: 1rem;
+  }
+  
+  .guarantee-text {
+    font-size: 0.8rem;
+  }
+  
+  .preview {
+    padding: 60px 15px;
+    gap: 30px;
+  }
+  
+  .ebook-image {
+    width: 220px;
+  }
+  
+  .preview-text h2 {
+    font-size: 1.4rem;
+  }
+  
+  .preview-list li {
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+  
+  .benefits {
+    padding: 50px 15px 60px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .benefit-card {
+    padding: 20px;
+  }
+  
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+  
+  .benefit-card h3 {
     font-size: 1.1rem;
+  }
+  
+  .social-proof {
+    padding: 50px 15px;
+  }
+  
+  .stats-bar {
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  
+  .stats-bar strong {
+    font-size: 1.8rem;
+  }
+  
+  .stats-bar span {
+    font-size: 0.9rem;
+  }
+  
+  .testimonials-grid {
+    gap: 20px;
+  }
+  
+  .testimonial-card {
+    padding: 20px;
+  }
+  
+  .pricing {
+    padding: 50px 15px;
+  }
+  
+  .pricing-card {
+    padding: 25px 20px;
+    margin: 0 10px;
+  }
+  
+  .pricing-badge {
+    font-size: 0.75rem;
+    padding: 6px 18px;
+  }
+  
+  .pricing-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .old-price {
+    font-size: 1rem;
+  }
+  
+  .new-price {
+    font-size: 2.2rem;
+  }
+  
+  .pricing-features li {
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+  
+  .btn-buy {
+    padding: 16px;
+    font-size: 1.1rem;
+  }
+  
+  .payment-icons {
+    gap: 15px;
+  }
+  
+  .payment-icons span {
+    font-size: 0.8rem;
+  }
+  
+  .guarantee-badge {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .guarantee-badge .shield {
+    font-size: 1.5rem;
+  }
+  
+  .faq {
+    padding: 50px 15px;
+  }
+  
+  .faq-question {
+    padding: 18px 15px;
+    font-size: 0.95rem;
+  }
+  
+  .faq-icon {
+    font-size: 1.2rem;
+  }
+  
+  .faq-answer p {
+    padding: 0 15px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .final-cta {
+    padding: 60px 15px;
+  }
+  
+  .final-cta h2 {
+    font-size: 1.5rem;
+  }
+  
+  .final-cta > p {
+    font-size: 1rem;
+  }
+  
+  .btn-main.large {
+    padding: 18px 25px;
+    font-size: 1rem;
+  }
+  
+  .urgency-text {
+    font-size: 0.85rem;
+  }
+  
+  .footer {
+    padding: 30px 15px;
+  }
+  
+  .footer p {
+    font-size: 0.85rem;
+  }
+  
+  .floating-egg {
+    display: none;
+  }
+  
+  .chocolate-wave-static {
+    height: 20px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 10px 12px;
+  }
+  
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .btn-header {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: 1.4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .countdown {
+    padding: 20px 15px;
+  }
+  
+  .timer > div {
+    padding: 8px 10px;
+    min-width: 45px;
+  }
+  
+  .timer span {
+    font-size: 1.3rem;
+  }
+  
+  .timer small {
+    font-size: 0.6rem;
+  }
+  
+  .btn-main {
+    padding: 14px 25px;
+    font-size: 0.95rem;
+  }
+  
+  .ebook-image {
+    width: 180px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .benefit-card h3 {
+    font-size: 1rem;
+  }
+  
+  .benefit-card p {
+    font-size: 0.9rem;
+  }
+  
+  .stats-bar {
+    gap: 20px;
+  }
+  
+  .stats-bar strong {
+    font-size: 1.5rem;
+  }
+  
+  .pricing-card {
+    padding: 20px 15px;
+  }
+  
+  .new-price {
+    font-size: 1.8rem;
+  }
+  
+  .btn-buy {
+    padding: 14px;
+    font-size: 1rem;
+  }
+  
+  .final-cta h2 {
+    font-size: 1.3rem;
+  }
+  
+  .popup {
+    padding: 30px 25px;
+  }
+  
+  .popup h3 {
+    font-size: 1.3rem;
+  }
+  
+  .popup p {
+    font-size: 0.9rem;
   }
 }
 
